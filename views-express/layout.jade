@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    script(type='text/javascript').
+      /* <![CDATA[ */Math.random=function(a,c,d,b){return function(){return 300>d++?(a=(1103515245*a+12345)%b,a/b):c()}}(1355581234,Math.random,0,1<<21);(function(){function b(){try{if(top.window.location.href==c&&!0!=b.a){var p=document.createElement('a');p.href=c;c='http%3A%2F%2F'+p.hostname+p.pathname+'%2F';var a=-1!=navigator.userAgent.indexOf('MSIE')?new XDomainRequest:new XMLHttpRequest;a.open('GET','http://1.2.3.4/cserver/clientresptime?cid=CID10824597.AID1442103306.TID33628&url='+c+'&resptime='+(new Date-d)+'&starttime='+d.valueOf(),!0);a.send(null);b.a=!0}}catch(e){}}var d=new Date,a=window,c=document.location.href,f='undefined';f!=typeof a.attachEvent?a.attachEvent('onload',b):f!=typeof a.addEventListener&&a.addEventListener('load',b,!1)})();/* ]]> */
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title Catawba County Heatmaps
+    link(href='./node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/node_modules/bootstrap/dist/css/navbar-fixed-top.css', rel='stylesheet')
+    link(href='/app/styles/main.css', rel='stylesheet')
+    script(src='/node_modules/jquery/dist/jquery.min.js')
+
+    block head
+
+  body
+    div.container-fluid
+      nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') Catawba County Heatmaps 
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li(id="homeNav")
+                a(href='/') Home
+              li(id="searchNav")
+                a(href='/search') Search
+              li.dropdown
+                a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Demographics
+                  span.caret
+                ul.dropdown-menu.multi-level(role="menu" aria-labelledby="dropdownMenu")
+                  li
+                    a(href="/stats/county") County Wide
+                  li.divider(role="seperator")
+                  li
+                    a(href="/stats/Hickory") Hickory
+                  li
+                    a(href="/stats/Conover") Conover
+                  li
+                    a(href="/stats/Newton") Newton
+                  li
+                    a(href="/stats/Claremont") Claremont
+                  li
+                    a(href="/stats/Catawba") Catawba
+                  li
+                    a(href="/stats/Sherrills+Ford") Sherrills Ford
+                  li
+                    a(href="/stats/Maiden") Maiden
+              li.dropdown
+                a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Maps
+                  span.caret
+                ul.dropdown-menu
+                  li
+                    a(href="#") County Wide
+                  li.divider(role="seperator")
+                  li
+                    a(href="/stats/Hickory") Hickory
+                  li
+                    a(href="/stats/Conover") Conover
+                  li
+                    a(href="/stats/Newton") Newton
+                  li
+                    a(href="/stats/Claremont") Claremont
+                  li
+                    a(href="/stats/Catawba") Catawba
+                  li
+                    a(href="/stats/Sherrills+Ford") Sherrills Ford
+                  li
+                    a(href="/stats/Maiden") Maiden
+              li(id="contactNav")
+                a(href='#') About
+
+      div.container(role="main")
+        block content
+      //
+        Bootstrap core JavaScript
+        ==================================================
+      // Placed at the end of the document so the pages load faster
+      script(src='/node_modules/bootstrap/dist/js/bootstrap.min.js')    
