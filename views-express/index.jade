@@ -1,22 +1,11 @@
 extends layout
 
 block head
-
-  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization&key=AIzaSyAbLXXYmkhVNo4hurgNoMXNrkkD-4Tbpvc")
-  script(src="/app/scripts-page/heatmap.js")   
+  
 
 block content
-  script(type='text/javascript').
-    createHeatMapObject(!{JSON.stringify(zillowData)});    
-  div(class="container some-thing-else")
-    .jumbotron(id="map" style="height:700px")
-
-  div(class="wrapper text-center")
-    div(class="btn-group" role="group" aria-label="...")
-      button(type="button" class="btn btn-default" onclick='toggleHeatmap()') Toggle Heatmap
-      button(type="button" class="btn btn-default" onclick='changeGradient()') Change Gradient
-      button(type="button" class="btn btn-default" onclick='changeRadius()') Change Radius
-      button(type="button" class="btn btn-default" onclick='changeOpacity()') Change Opacity
+  div(ng-app='catawbacountyheatmaps')
+    div(ng-view)
 
   script(src="/app/scripts-page/index.js")
 

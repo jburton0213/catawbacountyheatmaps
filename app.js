@@ -23,7 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/lib', express.static(path.join(__dirname, 'lib')));
 app.use('/app', express.static(path.join(__dirname, 'app')));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
-app.use('/styles', express.static(path.join(__dirname, 'node_modules')));
+app.use('/styles', express.static(path.join(__dirname, 'styles')));
+app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
 
 var routes = require('./routes-express/index');
 app.use('/', routes);

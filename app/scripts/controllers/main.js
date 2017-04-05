@@ -2,16 +2,13 @@
 
 /**
  * @ngdoc function
- * @name catawbacountyheatmapsApp.controller:MainCtrl
+ * @name catawbacountyheatmaps.controller:MainController
  * @description
  * # MainCtrl
  * Controller of the catawbacountyheatmapsApp
  */
-angular.module('catawbacountyheatmapsApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('catawbacountyheatmaps')
+  .controller('MainController', function ($scope, mainFactory) {
+    $scope.hello = 'Hello World!';
+    $scope.message = mainFactory.meaningOfLife;
   });

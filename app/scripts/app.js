@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('catawbacountyheatmapsApp', [
+  .module('catawbacountyheatmaps', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -22,9 +22,9 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'app/views/main.html',
+        controller: 'MainController',
+        controllerAs: 'mainFactory'
       })
       .when('/about', {
         templateUrl: 'views/about.html',

@@ -12,6 +12,7 @@ html(lang='en')
     link(href='/node_modules/bootstrap/dist/css/navbar-fixed-top.css', rel='stylesheet')
     link(href='/app/styles/main.css', rel='stylesheet')
     script(src='/node_modules/jquery/dist/jquery.min.js')
+    
 
     block head
 
@@ -78,9 +79,21 @@ html(lang='en')
                 a(href='#') About
 
       div.container(role="main")
+
         block content
-      //
-        Bootstrap core JavaScript
-        ==================================================
-      // Placed at the end of the document so the pages load faster
-      script(src='/node_modules/bootstrap/dist/js/bootstrap.min.js')    
+
+      script(src='/node_modules/bootstrap/dist/js/bootstrap.min.js')
+      script(src='/bower_components/angular/angular.js')
+      script(src='/bower_components/angular-animate/angular-animate.min.js')
+      script(src='/bower_components/angular-aria/angular-aria.min.js')
+      script(src='/bower_components/angular-cookies/angular-cookies.min.js')
+      script(src='/bower_components/angular-messages/angular-messages.min.js')
+      script(src='/bower_components/angular-mocks/angular-mocks.js')
+      script(src='/bower_components/angular-resource/angular-resource.min.js')
+      script(src='/bower_components/angular-route/angular-route.min.js')
+      script(src='/bower_components/angular-sanitize/angular-sanitize.min.js')
+      script(src='/bower_components/angular-touch/angular-touch.min.js')
+      
+      script(src='/app/scripts/app.js')
+      script(src='/app/scripts/controllers/main.js')
+      script(src='/app/scripts/services/main.js')

@@ -7,8 +7,8 @@
  * # main
  * Factory in the catawbacountyheatmapsApp.
  */
-angular.module('catawbacountyheatmapsApp')
-  .factory('main', function () {
+angular.module('catawbacountyheatmaps')
+  .factory('mainFactory', function () {
     // Service logic
     // ...
 
