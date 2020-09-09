@@ -32,3 +32,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+
+## JB Added 9/8/2020
+To run the server: nodemon
+To run the angular build process: npm start
+Both must be running at the same time.  As changes are made, it should automatically build.  

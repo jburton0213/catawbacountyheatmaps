@@ -1,5 +1,12 @@
 {
-    "watch": ["src"],
+    "watch": [
+        "controllers",
+        "routes",
+        "middleware",
+        "views",
+        "app",
+        "server"
+    ],
     "ext": "ts",
     "ignore": ["src/**/*.spec.ts"],
     "exec": "ts-node server.ts"

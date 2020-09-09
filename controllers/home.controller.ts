@@ -15,7 +15,7 @@ class HomeController implements IControllerBase {
     }
 
     index = (req: Request, res: Response) => {
-
+        console.log('HOme controller')
         const users = [
             {
                 id: 1,

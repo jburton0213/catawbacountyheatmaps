@@ -5,12 +5,13 @@ import loggerMiddleware from './middleware/logger'
 
 // import PostsController from './controllers/posts/posts.controller'
 import HomeController from './controllers/home.controller'
+import APIController from './controllers/api.controller'
 
 const app = new App({
     port: 5000,
     controllers: [
         new HomeController(),
-        // new PostsController()
+        new APIController()
     ],
     middleWares: [
         bodyParser.json(),

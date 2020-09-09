@@ -22,7 +22,9 @@ class App {
     }
 
     private routes(controllers: { forEach: (arg0: (controller: any) => void) => void; }) {
+        console.log(controllers)
         controllers.forEach(controller => {
+            console.log(controller.router)
             this.app.use('/', controller.router)
         })
     }

@@ -2,20 +2,20 @@ import * as express from 'express'
 import { Request, Response } from 'express'
 import IControllerBase from '../interfaces/IControllerBase.interface'
 
-class HomeController implements IControllerBase {
-    public path = '/'
-    public router = express.Router()
+class APIController implements IControllerBase {
+    public path = '/api'
+    public router = express.Router()    
 
     constructor() {
         this.initRoutes()
     }
 
     public initRoutes() {
-        this.router.get('/', this.index)
+        this.router.get('/api', this.index)
     }
 
     index = (req: Request, res: Response) => {
-
+        console.log('api controller!')
         const users = [
             {
                 id: 1,
@@ -30,8 +30,9 @@ class HomeController implements IControllerBase {
                 name: 'Ahmet'
             }
         ]
-        res.render('home/index', { users })
+        res.send(users);
+        
     }
 }
 
-export default HomeController
+export default APIController

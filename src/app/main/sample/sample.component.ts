@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 import { FuseTranslationLoaderService } from '@fuse/services/translation-loader.service';
@@ -18,9 +19,13 @@ export class SampleComponent
      * @param {FuseTranslationLoaderService} _fuseTranslationLoaderService
      */
     constructor(
-        private _fuseTranslationLoaderService: FuseTranslationLoaderService
+        private _fuseTranslationLoaderService: FuseTranslationLoaderService,
+        private _http: HttpClient
     )
     {
-        this._fuseTranslationLoaderService.loadTranslations(english, turkish);
+
+        this._http.get("api").subscribe(x => {
+            console.log(x);
+        })
     }
 }
